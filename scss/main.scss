@@ -1,0 +1,146 @@
+@import 'config';
+
+html {
+    box-sizing: border-box;
+    @include font(16);
+}
+
+body {
+    font-family: 'Spinnaker', sans-serif;
+    background: rgb(238,174,202);
+    background: linear-gradient(90deg, rgba(238,174,202,1) 0%, rgba(165,135,210,1) 56%, rgba(132,174,223,1) 100%);
+}
+
+*, *:before, *:after {
+    margin: 0;
+    padding: 0;
+    box-sizing: inherit;
+    
+    &:focus {
+        outline: none;
+    }
+ }
+
+ 
+ .completed {
+     text-decoration: line-through;
+     color: #b4b4b4 !important;
+ }
+
+ #container {
+     background-color: #f7f7f7;
+     box-shadow: 0 5px 5px rgba(0, 0, 0, 0.1);
+     width: 90%;
+     max-width: 400px;
+     margin: 6rem auto;
+     position: relative;
+
+     h1 {
+         @include font(20);
+         text-align: center;
+         text-transform: uppercase;
+         padding: 1.5rem 0 1rem 0;
+
+         i {
+             color: #d65d5d;
+         }
+     }
+
+     .list {
+        background-color: #fff;
+        border-radius: 4px;
+        border-left: 5px solid #daa2b1;
+        box-shadow: 0 0 3px rgba(0, 0, 0, 0.1); 
+        margin: 2%;
+        position: relative;
+        display: block;
+
+        .list-name {
+            margin-left: 2%;
+            color: #daa2b1;
+            height: 40px;
+            line-height: 40px;
+            outline: none;
+            border: none;
+            font-family: inherit;
+            font-weight: bold;
+            @include font(19);
+         }
+
+         .toggle-btn {
+            position: absolute;
+            top: 0;
+            right: 0;
+            color: #757575;
+            cursor: pointer;
+            line-height: 40px;
+            margin: 0 1rem;
+            @include font(27);
+         }
+
+         .delete {
+            color: #d65d5d;
+            margin: 0 .6rem;
+            width: 0;
+            cursor: pointer;
+            opacity: 0;
+            @include easeOut;
+         }
+
+        .item {
+            list-style: none;
+            cursor: default;
+            max-height: 40px;
+            line-height: 40px;
+            margin-left: 3%;
+            border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+            color: #777;
+            
+
+            &:hover {
+                .delete {
+                    opacity: 1;
+                }
+            }
+        }
+
+        &#urgent {
+            border-left: 5px solid #cf7070;
+            .list-name {
+                color: #cf7070;
+            }
+        }
+
+        &#important {
+            border-left: 5px solid #8587d4;
+            .list-name {
+                color: #8587d4;
+            }
+        }
+
+        &#want {
+            margin-bottom: 1rem;
+        }
+     }
+
+     .txt-input {
+         height: 40px;
+         line-height: 40px;
+         width: 100%;
+         border: none;
+         outline: none;
+         padding: 2% 3%;
+         color: #daa2b1;
+         @include font(18);
+         @include easeOut;
+
+         &::placeholder {
+             color: #d3d3d3;
+            @include font(14);
+         }
+
+         &:focus {
+             outline: 2px solid #787cd6;
+         }
+     }
+ }

@@ -1,0 +1,109 @@
+html {
+  box-sizing: border-box;
+  font-size: 16px;
+  font-size: 1rem; }
+
+body {
+  font-family: 'Spinnaker', sans-serif;
+  background: #eeaeca;
+  background: linear-gradient(90deg, #eeaeca 0%, #a587d2 56%, #84aedf 100%); }
+
+*, *:before, *:after {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit; }
+  *:focus, *:before:focus, *:after:focus {
+    outline: none; }
+
+.completed {
+  text-decoration: line-through;
+  color: #b4b4b4 !important; }
+
+#container {
+  background-color: #f7f7f7;
+  box-shadow: 0 5px 5px rgba(0, 0, 0, 0.1);
+  width: 90%;
+  max-width: 400px;
+  margin: 6rem auto;
+  position: relative; }
+  #container h1 {
+    font-size: 20px;
+    font-size: 1.25rem;
+    text-align: center;
+    text-transform: uppercase;
+    padding: 1.5rem 0 1rem 0; }
+    #container h1 i {
+      color: #d65d5d; }
+  #container .list {
+    background-color: #fff;
+    border-radius: 4px;
+    border-left: 5px solid #daa2b1;
+    box-shadow: 0 0 3px rgba(0, 0, 0, 0.1);
+    margin: 2%;
+    position: relative;
+    display: block; }
+    #container .list .list-name {
+      margin-left: 2%;
+      color: #daa2b1;
+      height: 40px;
+      line-height: 40px;
+      outline: none;
+      border: none;
+      font-family: inherit;
+      font-weight: bold;
+      font-size: 19px;
+      font-size: 1.1875rem; }
+    #container .list .toggle-btn {
+      position: absolute;
+      top: 0;
+      right: 0;
+      color: #757575;
+      cursor: pointer;
+      line-height: 40px;
+      margin: 0 1rem;
+      font-size: 27px;
+      font-size: 1.6875rem; }
+    #container .list .delete {
+      color: #d65d5d;
+      margin: 0 .6rem;
+      width: 0;
+      cursor: pointer;
+      opacity: 0;
+      transition: all 0.2s ease-in-out; }
+    #container .list .item {
+      list-style: none;
+      cursor: default;
+      max-height: 40px;
+      line-height: 40px;
+      margin-left: 3%;
+      border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+      color: #777; }
+      #container .list .item:hover .delete {
+        opacity: 1; }
+    #container .list#urgent {
+      border-left: 5px solid #cf7070; }
+      #container .list#urgent .list-name {
+        color: #cf7070; }
+    #container .list#important {
+      border-left: 5px solid #8587d4; }
+      #container .list#important .list-name {
+        color: #8587d4; }
+    #container .list#want {
+      margin-bottom: 1rem; }
+  #container .txt-input {
+    height: 40px;
+    line-height: 40px;
+    width: 100%;
+    border: none;
+    outline: none;
+    padding: 2% 3%;
+    color: #daa2b1;
+    font-size: 18px;
+    font-size: 1.125rem;
+    transition: all 0.2s ease-in-out; }
+    #container .txt-input::placeholder {
+      color: #d3d3d3;
+      font-size: 14px;
+      font-size: 0.875rem; }
+    #container .txt-input:focus {
+      outline: 2px solid #787cd6; }

@@ -1,0 +1,10 @@
+$base_font_size: 16;
+
+@mixin font($pixels) {
+    font-size: $pixels + px;
+    font-size: ( $pixels / $base_font_size ) + rem;
+}
+
+@mixin easeOut {
+    transition: all 0.2s ease-in-out;
+}

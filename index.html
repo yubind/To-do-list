@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link href="https://fonts.googleapis.com/css?family=Spinnaker" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="assets/css/main.css">
+    <title>To-do List</title>
+</head>
+
+<body>
+    <div id="container">
+        <h1>To do list <i class="fas fa-heart"></i></h1>
+        <ul class="list" id="urgent">
+            <input class="list-name" type="text" value="Urgent" maxlength="28">
+            <span class="toggle-btn"><i class="fas fa-angle-down"></i></span>
+            <li class="item"><span class="delete"><i class="fas fa-trash"></i></span>Study hard</li>
+            <li class="item"><span class="delete"><i class="fas fa-trash"></i></span>Become a developer</li>
+            <li class="item"><span class="delete"><i class="fas fa-trash"></i></span>Save the world</li>
+        </ul>
+        <ul class="list" id="important">
+            <input class="list-name" type="text" value="Important" maxlength="28">
+            <span class="toggle-btn"><i class="fas fa-angle-down"></i></span>
+            <li class="item"><span class="delete"><i class="fas fa-trash"></i></span>Onions</li>
+            <li class="item"><span class="delete"><i class="fas fa-trash"></i></span>Mushrooms</li>
+            <li class="item"><span class="delete"><i class="fas fa-trash"></i></span>Peppers</li>
+        </ul>
+        <ul class="list" id="want">
+            <input class="list-name" type="text" value="Want" maxlength="28">
+            <span class="toggle-btn"><i class="fas fa-angle-down"></i></span>
+            <li class="item"><span class="delete"><i class="fas fa-trash"></i></span>Go hiking</li>
+            <li class="item"><span class="delete"><i class="fas fa-trash"></i></span>Go to the beach</li>
+            <li class="item"><span class="delete"><i class="fas fa-trash"></i></span>Travel</li>
+            <li class="item"><span class="delete"><i class="fas fa-trash"></i></span>Travel More!</li>
+        </ul>
+        <input type="text" class="txt-input" placeholder="Add items" maxlength="28">
+    </div>
+
+
+
+
+<script type="text/javascript" src="assets/js/lib/jquery-3.3.1.min.js"></script>
+<script type="text/javascript" src="assets/js/lib/jquery-ui.min.js"></script>
+<script type="text/javascript" src="assets/js/main.js"></script>
+</body>
+</html>
